@@ -33,15 +33,15 @@ for i in range(simulations):
                 np.array(
                     [
                         bidder.cumul_utility(t) for t in range(epochs)
-                        ]
+                    ]
                 ) for bidder in [bidder]
             ] + [
                 np.array(
                     [
                         seller.cumul_revenue(t) for t in range(epochs)
-                        ]
+                    ]
                 ) for seller in [seller]
-                ]
+            ]
         ).T,
         columns=['time'] + [bidder.id, seller.id]
     )

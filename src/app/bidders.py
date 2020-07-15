@@ -47,9 +47,7 @@ class AbstractBidder(metaclass=ABCMeta):
         bidder_val = self.value_distribution
 
         def psi(v):
-            return v - (
-                    1 - bidder_val.dist.cdf(v, **bidder_val.kwargs)
-            ) / bidder_val.dist.pdf(v, **bidder_val.kwargs)
+            return v - (1 - bidder_val.dist.cdf(v, **bidder_val.kwargs)) / bidder_val.dist.pdf(v, **bidder_val.kwargs)
 
         return psi
 

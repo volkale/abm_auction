@@ -3,9 +3,9 @@ import numpy as np
 from scipy import stats
 import matplotlib.pyplot as plt
 
-from app.bidders import ValueDistribution, Bidder
-from app.auction import Seller
-from app.simulation import Simulation
+from bidders import ValueDistribution, Bidder
+from seller import Seller
+from simulation import Simulation
 
 
 np.random.seed(100)

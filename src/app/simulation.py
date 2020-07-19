@@ -1,7 +1,7 @@
 import numpy as np
 import random
-from app.seller import Seller
-from app.bidders import Bidder
+from seller import Seller
+from bidders import Bidder
 
 
 class Simulation:

@@ -90,7 +90,7 @@ class AbstractBidder(metaclass=ABCMeta):
     def _get_new_state(self, seller):
         cost = seller.state['revenue']
         state = {
-            'value': self.private_value if cost > 0. else 0.,
+            'value': self.ctr * self.private_value if cost > 0. else 0.,
             'cost': cost,
         }
         state['utility'] = state['value'] - state['cost']
